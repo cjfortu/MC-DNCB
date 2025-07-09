@@ -1,0 +1,16 @@
+OPTIMIZE 2 METRICS OPTION:
+landa = leave at 2.5
+alpha = leave at 0.5
+
+landa and alpha don't matter to policy loss because we are not concerned with
+risk.
+We simply iteratively sum the single critic policy loss expression for each critic (miss
+distance and time.), and take the mean of summed losses.
+
+They also don't matter to critic loss because it does not contain alpha, and
+there are no constraints (and hence landa doesn't matter).
+get_objective returns reward for each critic pass.
+
+This means reward must return 2 values (miss distance and time to impact)
+
+OPTIMIZE TIME, MITIGATE RISK TO MISSING

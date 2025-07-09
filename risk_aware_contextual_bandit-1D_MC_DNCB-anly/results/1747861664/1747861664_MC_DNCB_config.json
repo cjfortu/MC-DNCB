@@ -1,0 +1,28 @@
+{
+    "algorithm": "MC_DNCB",
+    "updates_per_step": 5,
+    "train_iters": 30000,
+    "eval_iters": 500,
+    "timestamp": "1747861664",
+    "env_noise": "{'dist': 'norm', 'var': [0.0001, 0.0001]}",
+    "landa": null,
+    "quantile_critic": [
+        0.1,
+        0.3,
+        0.5,
+        0.7,
+        0.8,
+        0.9,
+        0.99,
+        0.995,
+        0.999
+    ],
+    "critic_loss": "quantile_huber_loss",
+    "critic_objective_class": "<cost_functions.critic_objective object at 0x752e14096730>",
+    "actor_loss": "<cost_functions.constrained_loss object at 0x752e140965b0>",
+    "alpha_input_actor": 0,
+    "device": "cuda:0",
+    "actor_kwargs": "{'num_cells': [256, 256], 'activation_class': <class 'torch.nn.modules.activation.ReLU'>, 'last_activation': <class 'torch.nn.modules.activation.Sigmoid'>}",
+    "critics_kwargs": "[{'num_cells': [256, 256], 'activation_class': <class 'torch.nn.modules.activation.ReLU'>, 'n_quantiles': 21, 'quantile_vals': None}, {'num_cells': [256, 256], 'activation_class': <class 'torch.nn.modules.activation.ReLU'>, 'n_quantiles': 21, 'quantile_vals': None}]",
+    "exploration_noise": "<class 'utils_learning.OUNoise'>"
+}
